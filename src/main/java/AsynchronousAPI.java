@@ -5,28 +5,15 @@ import java.io.File;
 import java.io.FileNotFoundException;  
 import java.util.Scanner; 
 
-
-import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.HttpResponse;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
-import org.json.*;
-
 
 public class AsynchronousAPI extends HttpServlet{
     public static long LAST_TIME = 0L;
@@ -57,7 +44,7 @@ public class AsynchronousAPI extends HttpServlet{
                     System.out.println(data);
 
                     HttpClient httpclient = HttpClients.createDefault();
-                    HttpPost httpPost = new HttpPost("http://webhook.site/39c36db6-a973-41eb-adaa-bb1440512281");
+                    HttpPost httpPost = new HttpPost("{yourWebhookSiteURL}");
 
                                     
 
