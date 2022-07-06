@@ -50,11 +50,6 @@ public class AsynchronousAPI extends HttpServlet{
                     while(readFile.hasNextLine()){
                         data = data + readFile.nextLine();
                         //System.out.println(data);
-                        
-
-                        
-                        
-                        
 
                     }
                     readFile.close();
@@ -66,10 +61,7 @@ public class AsynchronousAPI extends HttpServlet{
 
                                     
 
-                    List<NameValuePair> params = new ArrayList<NameValuePair>(3);
-                    params.add(new BasicNameValuePair("action", "count"));
-                    params.add(new BasicNameValuePair("fields", "Status"));
-                    params.add(new BasicNameValuePair("filters", ""));
+                    
                     httpPost.setEntity(new StringEntity(data, "UTF-8"));
                     try{
                         HttpResponse response = httpclient.execute(httpPost);
@@ -90,6 +82,7 @@ public class AsynchronousAPI extends HttpServlet{
                 }
 
                 LAST_TIME = timestamp;
+                data = "";
                 
             }
         }
