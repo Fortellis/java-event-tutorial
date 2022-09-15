@@ -44,7 +44,7 @@ public class AsynchronousAPI extends HttpServlet{
                     System.out.println(data);
 
                     HttpClient httpclient = HttpClients.createDefault();
-                    HttpPost httpPost = new HttpPost("{yourWebhookSiteURL}");
+                    HttpPost httpPost = new HttpPost("{yourEndpoint}/{yourChannel}");
 
                                     
 
